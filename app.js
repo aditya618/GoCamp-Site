@@ -16,7 +16,9 @@ const commentRoutes = require('./routes/comments');
 const indexRoutes = require('./routes/index');
 
 // seedDB();
-mongoose.connect('mongodb://localhost/yelp_camp',{ useNewUrlParser: true, useUnifiedTopology: true })
+// mongodb://localhost/yelp_camp
+
+mongoose.connect('mongodb+srv://aditya:aditya@firstapp.g4ykv.mongodb.net/gocamp?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
 	console.log('DATABASE CONNECTED!!');
 }).catch(err => console.log('ERROR OCCURED ',err));
